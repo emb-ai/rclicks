@@ -163,8 +163,8 @@ To process precalculated `.csv` files with per sample metrics into tables from t
 python scripts/prepare_click_models_tables.py
 ```
 - `experiments/eval_cm/eval_cm_tetris.csv` -- evaluation of clickability models for TETRIS (Val) (Table 3 in main paper).
-- `experiments/eval_cm/eval_cm_all.csv` -- evaluation of clickability models for all datasets (Table 6 in Appendix A.2).
-- `experiments/eval_cm/ablation_cm_sigma_tetris.csv` -- `sigma`-parameter ablation of our clickability models on TETRIS (Val) (Table 7 in Appendix A.3).
+- `experiments/eval_cm/eval_cm_all.csv` -- evaluation of clickability models for all datasets (Table 6 in Appendix B.2).
+- `experiments/eval_cm/ablation_cm_sigma_tetris.csv` -- `sigma`-parameter ablation of our clickability models on TETRIS (Val) (Table 7 in Appendix B.3).
 
 ## Citation
 
