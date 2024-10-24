@@ -1,0 +1,10 @@
+INTERACTIVE_MODELS_PATH: ""
+EXPS_PATH: "experiments"
+
+# Evaluation datasets
+GRABCUT_PATH: "datasets/GrabCut"
+BERKELEY_PATH: "datasets/Berkeley"
+DAVIS_PATH: "datasets/DAVIS"
+COCO_MVAL_PATH: "datasets/COCO_MVal"
+TETRIS_PATH: "datasets/TETRIS"
+
