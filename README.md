@@ -1,6 +1,6 @@
 # RClicks: Realistic Click Simulation for Benchmarking Interactive Segmentation
 
-[![Page](https://img.shields.io/badge/Project-Page-blue)](https://rclicks.github.io)
+[![Page](https://img.shields.io/badge/Project-Page-blue)](https://emb-ai.github.io/rclicks-project)
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/pdf/2410.11722)  
 This repository provides the code to estimate **performance** and **robustness** of click-based interactive segmentation methods w.r.t. clicks positions.
 
