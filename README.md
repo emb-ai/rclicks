@@ -171,10 +171,13 @@ python scripts/prepare_click_models_tables.py
 Please cite the paper if you find challenge materials useful for your research:
 
 ```
-@article{antonov2024rclicks,
-  title={RClicks: Realistic Click Simulation for Benchmarking Interactive Segmentation},
-  author={Antonov, Anton and Moskalenko, Andrey and Shepelev, Denis and Krapukhin, Alexander and Soshin, Konstantin and Konushin, Anton and Shakhuro, Vlad},
-  journal={arXiv preprint arXiv:2410.11722},
-  year={2024}
+@inproceedings{antonov2024rclicks,
+ author = {Antonov, Anton and Moskalenko, Andrey and Shepelev, Denis and Krapukhin, Alexander and Soshin, Konstantin and Konushin, Anton and Shakhuro, Vlad},
+ booktitle = {Advances in Neural Information Processing Systems},
+ pages = {127673--127710},
+ publisher = {Curran Associates, Inc.},
+ title = {RClicks: Realistic Click Simulation for Benchmarking Interactive Segmentation},
+ volume = {37},
+ year = {2024}
 }
 ```
