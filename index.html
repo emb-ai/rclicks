@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="RClicks: Realistic Click Simulation for Benchmarking Interactive Segmentation">
+  <meta name="keywords" content="interactive segmentation, benchmark, real user clicks">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RClicks: Realistic Click Simulation for Benchmarking Interactive Segmentation</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/icon.png"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        macros: {
+          RR: "{\\bf R}",
+          bold: ["{\\bf #1}", 1],
+          indep: "{\\perp \\!\\!\\! \\perp}",
+        },
+        tags: 'ams',
+      },
+      svg: {
+        fontCache: 'global'
+      },
+    };
+  </script>
+  
+  <!-- load MathJax -->
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RClicks: Realistic Click Simulation for Benchmarking Interactive Segmentation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=v9GWM9YAAAAJ&hl=en">Anton Antonov</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=_13jza8AAAAJ">Andrey Moskalenko</a><sup>1,2,*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=IUkFdpUAAAAJ">Denis Shepelev</a><sup>1,*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=GAS_EXwAAAAJ">Alexander Krapukhin</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=XWKhjF4AAAAJ">
+                Konstantin Soshin</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=ZT_k-wMAAAAJ">Anton Konushin</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=MuPLmJsAAAAJ">Vlad Shakhuro</a><sup>1,2,+</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>AIRI,</span>
+            <span class="author-block"><sup>2</sup>Lomonosov Moscow State University,</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution,</span>
+            <span class="author-block"><sup>+</sup>Project leader</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2410.11722v2"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2410.11722v2"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/emb-ai/rclicks"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="width: 100%; margin: 0 auto;">
+        <img src="./static/images/teaser.png"
+                 width="100%"/>
+      </div>
+
+      <h2 class="subtitle has-text-centered">
+        Examples of real and predicted users' clicks of interactive segmentation task. 
+        The upper row depicts real-users clicks (green) for a given target object (white contour); 
+        the middle and bottom rows visualize, correspondingly, clicks and their distribution predicted by 
+        our <b style="color: darkgreen;">clickability model</b>.
+        Purple points in the middle and bottom rows represent clicks generated by the
+         <b style="color:deeppink;">baseline strategy</b>.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          The emergence of Segment Anything (SAM) sparked research interest in the field of interactive segmentation, especially in the context of image editing tasks and speeding up data annotation.
+          Unlike common semantic segmentation, interactive segmentation methods allow users to directly influence their output through prompts (e.g. clicks).
+          However, click patterns in real-world interactive segmentation scenarios remain largely unexplored.
+          Most methods rely on the assumption that users would click in the center of the largest erroneous area.
+          Nevertheless, recent studies show that this is not always the case.
+          Thus, methods may have poor performance in real-world deployment despite high metrics in a baseline benchmark.
+          To accurately simulate real-user clicks, we conducted a large crowdsourcing study of click patterns in an interactive segmentation scenario and collected 475K real-user clicks.
+          Drawing on ideas from saliency tasks, we develop a clickability model that enables sampling clicks, which closely resemble actual user inputs.
+          Using our model and dataset, we propose RClicks benchmark for a comprehensive comparison of existing interactive segmentation methods on realistic clicks.
+          Specifically, we evaluate not only the average quality of methods, but also the robustness w.r.t. click patterns.
+          According to our benchmark, in real-world usage interactive segmentation models may perform worse than it has been reported in the baseline benchmark, and most of the methods are not robust. 
+          We believe that RClicks is a significant step towards creating interactive segmentation methods that provide the best user experience in real-world cases.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Benchmarking Interactive Segmentation</h3>
+
+        <div class="content has-text-justified">
+          <p>
+            The goal of <b>interactive segmention</b> is to obtain hight-quality masks based on user inputs in multiple interaction rounds.
+            Benchmarking interactive segmention methods requires user inputs, however,
+            gathering real-user data is impractical.
+          </p>
+          <p>  
+            In practice segmentation quality is assessed with a <b>baseline</b> clicking strategy, when in each round 
+            clicks are put in the center of the largest erroneous area. 
+            This strategy does not accuretely model real user behavior, and segmentation methods 
+            may perfom worse in real–world scenarios compared to a benchmark based on baseline clicking.
+          </p>
+          <p> 
+            To enable more accurate evaluation of interactive segmentation methods
+            we propose a <b>highly realistic simulator of user clicks</b>.
+          </p>
+
+          <div style="width: 90%; margin: 0 auto; text-align: center;">
+            <img src="./static/images/nsr.png"
+                     width="100%"/>
+            <div class="content has-text-centered">
+              Averaged masks predicted by various segmentation methods for given real first-round clicks.
+              These examples illustrate the sensitivity of segmentation methods to clicks locations.  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Contributions</h3>
+
+        <div class="content has-text-justified">
+          <ul>
+            <li> Multi-round interaction dataset of <b>475 544</b> clicks
+                and <b>methodology</b> of its collection.
+            </li>
+            <li> Novel <b>clickability model</b> for realistic click simulation.
+            </li>
+            <li> <b>RClicks</b> — a benchmark for measurement of real–world annotation
+              time and robustness of interactive segmentation methods.
+            </li>
+            <li>
+              Methodology to estimate the real-world segmentation <b>difficulty score</b>
+              for each instance in a dataset.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br/>
+        
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Data Collection</h3>
+
+        <div class="content has-text-justified">
+            Our dataset is based on DAVIS, GrabCut, COCO–MVal, Berkeley and
+          TETRIS.
+            Collected user inputs using Toloka.AI both on PC and mobile devices.
+              To obtain error masks for the subsequent rounds, we 
+            applied state-of-the-art interactive segmentation methods: SAM, SimpleClick, and RITM.
+
+            <div style="width: 80%; margin: 0 auto; text-align: center;">
+              <img src="./static/images/data_collection.png"
+                        width="100%"/>
+              <div class="content has-text-centered">
+                Data collection pipeline.  
+              </div>
+            </div>
+        
+        </div>
+      </div>
+    </div>
+    <br/>
+    
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Clickability Model</h3>
+
+        <div class="content has-text-justified">
+          <p>
+            Our model predicts a <b>clickability map</b>. 
+            Clickability map is a singlechannel image 
+            s.t. the value of each pixel corresponds to the probability that the user will click on it.
+          </p>
+
+          <div style="width: 70%; margin: 0 auto; text-align: center;">
+            <img src="./static/images/click_model_scheme.png"
+                      width="100%"/>
+            <div class="content has-text-centered">
+              Proposed clickability prediction pipeline.  
+            </div>
+          </div>
+          <br/>
+          <p>
+            Our model is the best compared with uniform distribution (UD),
+            distance transform (DT), and saliency map (SM).
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <div style="width: 100%; margin: 0 auto; text-align: center;">
+            <img src="./static/images/click_models.png"
+                      width="100%"/>
+          </div>
+          <div class="content has-text-centered">
+            Examples of considered clickability models: (a)
+            visualizes target object (white contour) and ground-truth
+            clicks (green points); (b) – (d) depict uniform distribution
+            (UD), distance transform (DT), and saliency map (SM) respectively;
+            (e) – our predicted clickability map.  
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <div style="width: 90%; margin: 0 auto; text-align: center;">
+            <img src="./static/images/click_models_comp.png"
+            width="100%"/>
+          </div>
+          <div class="content has-text-centered">
+            Evaluation of various clickability models on real-user clicks of
+            TETRIS validation part. Our approach
+            outperforms existing clicking strategies
+            in terms of the proximity of samples to
+            real-user clicks.
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+      
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">RClicks Benchmark</h3>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <div class="content has-text-justified">
+            <p>
+              Using clickability map, we obtain <b>clicking groups</b> $\{G_i\}^{10}_{i=1}$.
+              Each clicking group corresponds to clicks in some probabilty interval that has 10% of total probability mass.
+            </p>
+              Using clicking groups, we calculate the following metrics:            
+            <ul>
+              <li>
+                Sample NoC — mean and standard deviation of clicks number (max 20)
+                needed to achieve 90% IoU.
+              </li>
+              <li> ∆SB — relative increase in Sample NoC compared to a baseline
+                strategy.
+              </li>
+              <li> ∆GR — relative increase in annotation time between G$_1$ and G$_{10}$
+                clicking groups.
+              </li>
+              <li> IoU noise-to-signal ratio (NSR) estimates real-world robustness on first-round
+                collected clicks. Higher NSR values indicate more challenging segmentation instances.
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <div style="width: 80%; margin: 0 auto; text-align: center;">
+            <img src="./static/images/click_groups.png"
+            width="100%"/>
+          </div>
+          <div class="content has-text-centered">
+            Spatial distribution of clicking groups obtained from our clickability model.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <div style="width: 100%; margin: 0 auto; text-align: center;">
+            <img src="./static/images/poster_table.png"
+            width="100%"/>
+          </div>
+          <div class="content has-text-centered">
+            Evaluation results of state-of-the-art interactive segmentation methods. 
+            Statistics of NoC20@90 on clicking groups, averaged over datasets.
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <div style="width: 100%; margin: 0 auto; text-align: center;">
+            <img src="./static/images/nsr_plot.png"
+            width="100%"/>
+          </div>
+          <div class="content has-text-centered">
+            A scatter plot of the mean vs. standard deviation (STD)
+            of IoU for the first real-users clicks.
+            Each point represents the statistics for each instance, 
+            averaged across all considered segmentation methods and real clicks.
+            An average NSR for each dataset
+            is provided in brackets in the legend.
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Results</h3>
+
+        <div class="content has-text-justified">
+          <ul>
+            <li> Baseline strategy underestimates the real-world annotation
+              time from 5% up to 29%.
+            </li>
+            <li> Annotation time of users from different clicking groups varies from
+              3% up to 79%.
+              
+            </li>
+            <li> There is currently no segmentation method that is optimal in terms of both
+              performance and robustness on all datasets.
+              Developers should select a method in accordance with their requirements.
+            </li>
+            <li>
+              DAVIS, with its 24.15 NSR, stands as the hardest dataset for
+              annotation.
+            </li>
+          </ul>
+        </div>
+        <br/>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{antonov2024rclicks,
+      title={RClicks: Realistic Click Simulation for Benchmarking Interactive Segmentation}, 
+      author={Antonov, Anton  and Moskalenko, Andrey and Shepelev, Denis and Krapukhin, Alexander and Soshin, Konstantin and Konushin, Anton and Shakhuro, Vlad},
+      booktitle={NeurIPS 2024},
+      year={2024}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2410.11722v2">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/emb-ai/rclicks-project">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
