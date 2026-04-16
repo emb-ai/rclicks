@@ -47,7 +47,7 @@ This project is mostly developed based on [RITM](https://github.com/saic-vul/rit
 
 [GrabCut]: https://drive.google.com/file/d/1tU17eJaevYd5PQAwzEK6oG1N9eBJORC4/view?usp=sharing
 [Berkeley]: https://drive.google.com/file/d/1yStolKW8AnS5rYm3VhgnID_XReNCXbEJ/view?usp=sharing
-[DAVIS]: https://drive.google.com/file/d/1yStolKW8AnS5rYm3VhgnID_XReNCXbEJ/view?usp=sharing
+[DAVIS]: https://drive.google.com/file/d/1DhwMOqbwH4tcIrVfqtSczdofjdHHnMCJ/view?usp=sharing
 [COCO_MVal]: https://drive.google.com/file/d/1oz1VT8YqykQFfx_Vtp_wtYFGz5mYBOnp/view?usp=sharing
 [SBD]: https://drive.google.com/file/d/13LOm0eorDCWO19PzgEI2NeDpWGiZanAf/view?usp=sharing
 [COCO_LVIS]: https://drive.google.com/file/d/15S5lseLQBPSDu3SkNYNKPDBwZiqQpl_-/view?usp=sharing
