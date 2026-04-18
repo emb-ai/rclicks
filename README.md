@@ -44,6 +44,7 @@ This project is mostly developed based on [RITM](https://github.com/saic-vul/rit
 |TETRIS     |  2000 images with 2531 instances (test)      |  [TETRIS.zip (6.3 GB)][TETRIS]       |
 |PREVIEWS (TETRIS)     |  100 images and masks from TETRIS used to ablate display modes    |  [PREVIEWS.zip (298 MB)][PREVIEWS]       |
 |SUBSEC_MASKS     |  RClicks masks for subsequent clicks    |  [SUBSEC_MASKS.zip (36 MB)][SUBSEC_MASKS]       |
+|COCO-LVIS     |  Training annotations from RITM/F-BRS    |  [cocolvis_annotation.tar.gz (920 MB)][COCO_LVIS]       |
 
 [GrabCut]: https://drive.google.com/file/d/1tU17eJaevYd5PQAwzEK6oG1N9eBJORC4/view?usp=sharing
 [Berkeley]: https://drive.google.com/file/d/1yStolKW8AnS5rYm3VhgnID_XReNCXbEJ/view?usp=sharing
